@@ -1,0 +1,7 @@
+{
+    "name": "sarif-converter",
+    "version": "0.0.1",
+    "dependencies": {
+	"@microsoft/sarif-multitool": "^2.3.6"
+    }
+}

@@ -1,0 +1,22 @@
+name: "Convert to SARIF"
+description: "Convert analysis output to SARIF using Sarif.Multitool"
+author: "fiona.klute@gmx.de"
+
+inputs:
+  tool:
+    description: "The input tool name"
+    required: yes
+  input_file:
+    description: "File to convert"
+    required: yes
+  sarif_file:
+    description: "Output file in SARIF format"
+    required: yes
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "plus-circle"
+  color: "purple"
