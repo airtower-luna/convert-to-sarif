@@ -18,5 +18,5 @@ runs:
   image: "Dockerfile"
 
 branding:
-  icon: "plus-circle"
+  icon: "refresh-cw"
   color: "purple"

@@ -5,11 +5,11 @@ tool="${INPUT_TOOL}"
 input="$(realpath "${INPUT_INPUT_FILE}")"
 output="$(realpath "${INPUT_SARIF_FILE}")"
 
+# actual cppcheck output contains a few items the converter doesn't
+# understand
 if [ "${tool,,}" = "cppcheck" ]; then
     tmp=$(tempfile)
-    echo "${tmp}"
     python3 clean-cppcheck-xml.py "${input}" >"${tmp}"
-    cat "${tmp}"
     input="$(realpath "${tmp}")"
 fi
 
