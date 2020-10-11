@@ -14,6 +14,6 @@ if [ "${tool,,}" = "cppcheck" ]; then
 fi
 
 # must be in the action directory to use the npm packages installed there
-cd /action
+cd "$(dirname ${0})"
 npx "@microsoft/sarif-multitool" convert "${input}" \
     --tool "${tool}" --output "${output}" --force
