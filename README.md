@@ -15,9 +15,5 @@ Security Alerts. The NPM package is downloaded during action setup.
 ```
 
 The `tool` can be any of the [converters supported by
-Sarif.Multitool](https://github.com/microsoft/sarif-sdk/blob/master/docs/multitool-usage.md#supported-converters). Note
-that the one for CppCheck [cannot handle certain XML elements produced
-by current CppCheck
-versions](https://github.com/microsoft/sarif-sdk/issues/2103), so this
-action [filters them out](./clean-cppcheck-xml.py) before calling the
-converter. I haven't tested other converters.
+Sarif.Multitool](https://github.com/microsoft/sarif-sdk/blob/master/docs/multitool-usage.md#supported-converters). I
+have only used the "CppCheck" one so far, though.
