@@ -24,3 +24,12 @@ jobs:
           sarif_file: 'test.sarif'
       - run: |
           cat test.sarif
+      - name: check SARIF output
+        run: |
+          import json
+          with open('test.sarif') as fh:
+            sarif = json.load(fh)
+          results = sarif['runs'][0]['results']
+          assert set(r['ruleId'] for r in results) == {'uninitvar', 'missingIncludeSystem'}
+          assert sarif['runs'][0]['tool']['driver']['name'] == 'CppCheck'
+        shell: python
