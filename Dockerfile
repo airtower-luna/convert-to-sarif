@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:19
 COPY action.bash package.json /action/
 WORKDIR /action/
 RUN npm install
