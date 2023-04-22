@@ -10,6 +10,7 @@ updates:
     schedule:
       interval: 'weekly'
       day: 'saturday'
+    versioning-strategy: 'increase'
   - package-ecosystem: 'docker'
     directory: '/'
     schedule:
