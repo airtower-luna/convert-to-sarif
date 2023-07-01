@@ -1,4 +1,4 @@
-FROM node:20
+FROM docker.io/library/node:20.3.1-bullseye
 COPY action.bash package.json /action/
 WORKDIR /action/
 RUN npm install
