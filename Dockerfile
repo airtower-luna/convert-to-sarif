@@ -1,4 +1,4 @@
-FROM docker.io/library/node:23.11.0-bullseye
+FROM docker.io/library/node:24.0.1-bullseye
 COPY action.bash package.json package-lock.json /action/
 WORKDIR /action/
 RUN npm install
