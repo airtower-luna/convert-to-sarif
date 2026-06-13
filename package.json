@@ -8,6 +8,6 @@
 	"url": "https://github.com/airtower-luna/convert-to-sarif.git"
     },
     "dependencies": {
-	"@microsoft/sarif-multitool": "^4.6.5"
+	"@microsoft/sarif-multitool": "^5.0.7"
     }
 }
