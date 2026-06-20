@@ -1,4 +1,4 @@
-FROM docker.io/library/node:26.3.0-trixie
+FROM docker.io/library/node:26.3.1-trixie
 COPY action.bash package.json package-lock.json /action/
 WORKDIR /action/
 RUN npm install
